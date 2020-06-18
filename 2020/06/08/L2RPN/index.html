@@ -106,7 +106,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2020/06/">June 2020</a></li><li><a class="archive-link" href="/archives/2019/04/">April 2019</a>
+	                        <a class="archive-link" href="/archives/2020/06/">June 2020</a></li><li><a class="archive-link" href="/archives/2019/06/">June 2019</a>
 	                    </ul>
 	        </li>
 	        
@@ -170,7 +170,56 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="这篇博客主要用于整理L2RPN赛题的相关信息和调研情况"><a href="#这篇博客主要用于整理L2RPN赛题的相关信息和调研情况" class="headerlink" title="这篇博客主要用于整理L2RPN赛题的相关信息和调研情况"></a><strong>这篇博客主要用于整理L2RPN赛题的相关信息和调研情况</strong></h1><h2 id="赛题情况-（from-欧阳老师"><a href="#赛题情况-（from-欧阳老师" class="headerlink" title="赛题情况 （from 欧阳老师)"></a><strong>赛题情况 （from 欧阳老师)</strong></h2><blockquote>
+                <h1 id="这篇博客主要用于整理L2RPN赛题的相关信息和调研情况"><a href="#这篇博客主要用于整理L2RPN赛题的相关信息和调研情况" class="headerlink" title="这篇博客主要用于整理L2RPN赛题的相关信息和调研情况"></a><strong>这篇博客主要用于整理L2RPN赛题的相关信息和调研情况</strong></h1><!-- TOC -->
+
+<ul>
+<li><a href="#这篇博客主要用于整理l2rpn赛题的相关信息和调研情况"><strong>这篇博客主要用于整理L2RPN赛题的相关信息和调研情况</strong></a><ul>
+<li><a href="#赛题情况-from-欧阳老师"><strong>赛题情况 （from 欧阳老师)</strong></a></li>
+<li><a href="#这周需要你做的是整理出来一个ppt"><strong>这周需要你做的是整理出来一个PPT：</strong></a></li>
+</ul>
+</li>
+<li><a href="#参考资料"><strong>参考资料</strong></a></li>
+<li><a href="#grid2op框架"><strong>Grid2op框架</strong></a><ul>
+<li><a href="#基本功能"><strong>基本功能</strong></a><ul>
+<li><a href="#创建环境"><strong>创建环境</strong></a></li>
+<li><a href="#创建agent"><strong>创建Agent</strong></a></li>
+<li><a href="#评估agent的表现"><strong>评估Agent的表现</strong></a></li>
+<li><a href="#更快速的api---runner"><strong>更快速的API—Runner</strong></a></li>
+</ul>
+</li>
+<li><a href="#observations"><strong>Observations</strong></a><ul>
+<li><a href="#得到observations实例"><strong>得到Observations实例</strong></a></li>
+<li><a href="#observations包含什么"><strong>Observations包含什么？</strong></a><ul>
+<li><a href="#observations属性"><strong>Observations属性</strong></a></li>
+<li><a href="#observations方法"><strong>Observations方法</strong></a></li>
+<li><a href="#observations仿真待看"><strong>Observations仿真(待看)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#action"><strong>Action</strong></a><ul>
+<li><a href="#定义两个动作类型change-vs-set"><strong>定义两个动作类型：Change vs Set</strong></a><ul>
+<li><a href="#change改变"><strong>Change：改变</strong></a></li>
+<li><a href="#set设置"><strong>Set：设置</strong></a></li>
+</ul>
+</li>
+<li><a href="#模糊动作类型"><strong>模糊动作类型</strong></a></li>
+<li><a href="#action-helper--action-space"><strong>Action Helper / action space</strong></a><ul>
+<li><a href="#last-yeara-topology-action"><strong>Last Year：A Topology Action</strong></a></li>
+<li><a href="#线路状态修改">线路状态修改</a></li>
+</ul>
+</li>
+<li><a href="#变电站重新配置改变拓扑结构"><strong>变电站重新配置/改变拓扑结构</strong></a></li>
+<li><a href="#indexed-actions"><strong>Indexed actions</strong></a></li>
+</ul>
+</li>
+<li><a href="#agent"><strong>Agent</strong></a></li>
+<li><a href="#train-an-agent-using-reinforcement-learning"><strong>Train an Agent using Reinforcement Learning</strong></a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="赛题情况-（from-欧阳老师"><a href="#赛题情况-（from-欧阳老师" class="headerlink" title="赛题情况 （from 欧阳老师)"></a><strong>赛题情况 （from 欧阳老师)</strong></h2><blockquote>
 <p>这个<a href="https://competitions.codalab.org/competitions/24902" target="_blank" rel="noopener">比赛</a>是基于grid2op这个python库来做的，我们这周需要整理出来grid2op的资料</p>
 </blockquote>
 <ul>
